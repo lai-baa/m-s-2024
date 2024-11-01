@@ -2,13 +2,13 @@
 
 import { csrfFetch } from './csrf';
 
-const SET_USER = "session/setUser";
-const REMOVE_USER = "session/removeUser";
+const SET_ADMIN = "session/setAdmin";
+const REMOVE_ADMIN = "session/removeAdmin";
 
-const setUser = (user) => {
+const setAdmin = (admin) => {
   return {
-    type: SET_USER,
-    payload: user
+    type: SET_ADMIN,
+    payload: admin
   };
 };
 
@@ -18,8 +18,8 @@ const setUser = (user) => {
 //   };
 // };
 
-export const login = (user) => async (dispatch) => {
-  const { credential, password } = user;
+export const login = (admin) => async (dispatch) => {
+  const { credential, password } = admin;
   const response = await csrfFetch("/api/session", {
     method: "POST",
     body: JSON.stringify({
@@ -28,18 +28,18 @@ export const login = (user) => async (dispatch) => {
     })
   });
   const data = await response.json();
-  dispatch(setUser(data.user));
+  dispatch(setAdmin(data.admin));
   return response;
 };
 
-const initialState = { user: null };
+const initialState = { admin: null };
 
 const sessionReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_USER:
-      return { ...state, user: action.payload };
-    case REMOVE_USER:
-      return { ...state, user: null };
+    case SET_ADMIN:
+      return { ...state, admin: action.payload };
+    case REMOVE_ADMIN:
+      return { ...state, admin: null };
     default:
       return state;
   }
