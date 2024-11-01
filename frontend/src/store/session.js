@@ -32,6 +32,13 @@ export const login = (admin) => async (dispatch) => {
   return response;
 };
 
+export const restoreAdmin = () => async (dispatch) => {
+    const response = await csrfFetch("/api/session");
+    const data = await response.json();
+    dispatch(setAdmin(data.admin));
+    return response;
+};
+
 const initialState = { admin: null };
 
 const sessionReducer = (state = initialState, action) => {
