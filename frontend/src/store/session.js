@@ -12,11 +12,11 @@ const setAdmin = (admin) => {
   };
 };
 
-// const removeUser = () => {
-//   return {
-//     type: REMOVE_USER
-//   };
-// };
+const removeAdmin = () => {
+  return {
+    type: REMOVE_ADMIN
+  };
+};
 
 export const login = (admin) => async (dispatch) => {
   const { credential, password } = admin;
@@ -36,6 +36,14 @@ export const restoreAdmin = () => async (dispatch) => {
     const response = await csrfFetch("/api/session");
     const data = await response.json();
     dispatch(setAdmin(data.admin));
+    return response;
+};
+
+export const logout = () => async (dispatch) => {
+    const response = await csrfFetch('/api/session', {
+      method: 'DELETE'
+    });
+    dispatch(removeAdmin());
     return response;
 };
 
