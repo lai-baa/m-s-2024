@@ -3,34 +3,21 @@
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-import OpenModalButton from '../OpenModalButton';
-import LoginFormModal from '../LoginFormModal';
-import './Navigation.css';
+// import './Navigation.css';
 
 function Navigation({ isLoaded }) {
-  const sessionAdmin = useSelector((state) => state.session.admin);
-
-  const sessionLinks = sessionAdmin ? (
-    <li>
-      <ProfileButton user={sessionAdmin} />
-    </li>
-  ) : (
-    <>
-      <li>
-        <OpenModalButton
-          buttonText="Log In"
-          modalComponent={<LoginFormModal />}
-        />
-      </li>
-    </>
-  );
+  const sessionAdmin = useSelector(state => state.session.admin);
 
   return (
     <ul>
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      {isLoaded && sessionLinks}
+      {isLoaded && (
+        <li>
+          <ProfileButton admin={sessionAdmin} />
+        </li>
+      )}
     </ul>
   );
 }
