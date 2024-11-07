@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { FaUserCircle } from 'react-icons/fa';
 import * as sessionActions from '../../store/session';
-import OpenModalButton from '../OpenModalButton/OpenModalButton';
+import OpenModalMenuItem from './OpenModalMenuItem';
 import LoginFormModal from '../LoginFormModal/LoginFormModal';
 
 function ProfileButton({ admin }) {
@@ -32,6 +32,8 @@ function ProfileButton({ admin }) {
     return () => document.removeEventListener('click', closeMenu);
   }, [showMenu]);
 
+  const closeMenu = () => setShowMenu(false);
+
   const logout = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
@@ -57,8 +59,9 @@ function ProfileButton({ admin }) {
         ) : (
           <>
             <li>
-              <OpenModalButton
+            <OpenModalMenuItem
                 buttonText="Log In"
+                onButtonClick={closeMenu}
                 modalComponent={<LoginFormModal />}
               />
             </li>
