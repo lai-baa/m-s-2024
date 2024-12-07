@@ -41,7 +41,7 @@ li {
 } */
 
 /* Profile dropdown styling */
-.profile-dropdown {
+/* .profile-dropdown {
     display: block;
     position: absolute;
     top: 3.5em;
@@ -90,7 +90,7 @@ li {
     align-items: center;
     gap: 1em;
     cursor: pointer;
-}
+} */
 
 /* Toggle menu button styling */
 #toggle-menu-button {
