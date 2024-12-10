@@ -20,7 +20,7 @@ li {
     display: flex;
 }
 
-/* .nav-links {
+.nav-links {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -38,10 +38,10 @@ li {
     background-color: blueviolet;
     color: white;
     border-radius: 4px;
-} */
+}
 
 /* Profile dropdown styling */
-/* .profile-dropdown {
+.profile-dropdown {
     display: block;
     position: absolute;
     top: 3.5em;
@@ -90,7 +90,7 @@ li {
     align-items: center;
     gap: 1em;
     cursor: pointer;
-} */
+}
 
 /* Toggle menu button styling */
 #toggle-menu-button {
