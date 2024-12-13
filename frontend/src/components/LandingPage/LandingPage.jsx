@@ -5,7 +5,12 @@ import Navigation from "../Navigation/Navigation";
 function LandingPage() {
     
     return (
-        <Navigation />
+        <>
+            <Navigation />
+            <p>RSVP for Mariam and Shakar&apos;s wedding!</p>
+            
+        </>
+        
     )
 }
 
