@@ -17,7 +17,7 @@ function RSVPModal() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(formData); // Example action: log the form data
+        // console.log(formData);
         closeModal();
     }
 
