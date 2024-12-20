@@ -13,13 +13,26 @@ function RSVPModal() {
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // console.log(formData);
+
+        const subject = "RSVP for Mariam and Shakar's Wedding";
+        const body = `
+            Name: ${formData.name}
+            Phone: ${formData.phone}
+            Email: ${formData.email}
+            Number of Attendees: ${formData.attendees}
+        `;
+        const mailtoLink = `mailto:laiba.junk1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+        // Open the user's email client
+        window.location.href = mailtoLink;
+
+        // Optionally close the modal
         closeModal();
-    }
+    };
 
     return (
         <>
