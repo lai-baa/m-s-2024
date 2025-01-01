@@ -12,6 +12,7 @@ function LandingPage() {
     return (
         <>
             <Navigation />
+            <img />
             <h1>MARIAM & SHAKAR TIE THE KNOT</h1>
             <h2>Join us for the celebration of love</h2>
             <div id='fun-facts-div'>
@@ -19,6 +20,7 @@ function LandingPage() {
                 <p>Both Mariam and Shakar work in law enforcement. Mariam is a lawyer and Shakar is a police officer.</p>
                 <p>Both Mariam and Shakar have one dimple on the same side.</p>
             </div>
+            <img />
             <div>
                 <img />
                 <p>
@@ -34,6 +36,7 @@ function LandingPage() {
                     - Shakar and Mariam
                 </p>
             </div>
+            <img />
             <div id='quran-ver-div'>
                 <h2 id='quran-ver-heading'>IT IS NARRATED (30:21)</h2>
                 <p id='quran-verse'>
