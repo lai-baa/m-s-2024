@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useModal } from '../../context/Modal';
+import styles from './RSVPModal.css';
 
 function RSVPModal() {
     const { closeModal } = useModal();
@@ -35,7 +36,7 @@ function RSVPModal() {
     };
 
     return (
-        <>
+        <div className={styles.modalContainer}>
             <h1>RSVP Form</h1>
             <form onSubmit={handleSubmit}>
                 <label>
@@ -81,7 +82,7 @@ function RSVPModal() {
                 </label>
                 <button type="submit">Submit</button>
             </form>
-        </>
+        </div>
     );
 }
 

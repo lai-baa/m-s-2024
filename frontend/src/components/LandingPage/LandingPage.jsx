@@ -22,7 +22,6 @@ function LandingPage() {
             </div>
             <img />
             <div>
-                <img />
                 <p>
                     We are incredibly grateful to have you here with us on this momentous day.
                     Your presence fills our heart with warmth an joy, and we cannot thank you 
