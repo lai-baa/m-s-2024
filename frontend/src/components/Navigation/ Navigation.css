@@ -113,13 +113,13 @@ li {
 }
 
 /* Logout button styling */
-#logout {
+/* #logout {
     justify-content: center;
 }
 
 #logout button {
-    padding: 0.8em; /* Reduced padding */
-    border-radius: 20px; /* Slightly smaller radius */
+    padding: 0.8em; 
+    border-radius: 20px;
     box-shadow: none;
     background-color: rgb(129, 128, 128);
     color: white;
@@ -129,7 +129,7 @@ li {
 
 #logout button:hover {
     background-color: rgb(105, 105, 105);
-}
+} */
 
 /* Styling for the links in the profile dropdown */
 /* .dropdown-link {
