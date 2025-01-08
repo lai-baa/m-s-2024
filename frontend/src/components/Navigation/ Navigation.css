@@ -113,7 +113,7 @@ li {
 }
 
 /* Logout button styling */
-/* #logout {
+#logout {
     justify-content: center;
 }
 
@@ -129,7 +129,7 @@ li {
 
 #logout button:hover {
     background-color: rgb(105, 105, 105);
-} */
+}
 
 /* Styling for the links in the profile dropdown */
 /* .dropdown-link {
