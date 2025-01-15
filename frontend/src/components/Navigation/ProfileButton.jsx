@@ -1,11 +1,15 @@
 // frontend/src/components/Navigation/ProfileButton.jsx
 
-import { useState, useEffect, useRef } from 'react';
-import { useDispatch } from 'react-redux';
-import { FaUserCircle } from 'react-icons/fa';
-import * as sessionActions from '../../store/session';
+import { logout } from "../../store/session";
 import OpenModalMenuItem from './OpenModalMenuItem';
 import LoginFormModal from '../LoginFormModal/LoginFormModal';
+import { useNavigate } from "react-router-dom";
+
+import { useDispatch } from 'react-redux';
+import { useState, useEffect, useRef } from 'react';
+import { FaUserCircle } from 'react-icons/fa';
+import { IoMenu } from "react-icons/io5";
+import * as sessionActions from '../../store/session';
 
 function ProfileButton({ admin }) {
   const dispatch = useDispatch();
@@ -13,8 +17,7 @@ function ProfileButton({ admin }) {
   const ulRef = useRef();
 
   const toggleMenu = (e) => {
-    e.stopPropagation(); // Keep click from bubbling up to document and triggering closeMenu
-    // if (!showMenu) setShowMenu(true);
+    e.stopPropagation();
     setShowMenu(!showMenu);
   };
 
