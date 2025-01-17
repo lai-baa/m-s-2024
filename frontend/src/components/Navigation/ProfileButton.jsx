@@ -1,14 +1,14 @@
 // frontend/src/components/Navigation/ProfileButton.jsx
 
-import { logout } from "../../store/session";
+// import { logout } from "../../store/session";
 import OpenModalMenuItem from './OpenModalMenuItem';
 import LoginFormModal from '../LoginFormModal/LoginFormModal';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 import { useDispatch } from 'react-redux';
 import { useState, useEffect, useRef } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
-import { IoMenu } from "react-icons/io5";
+// import { IoMenu } from "react-icons/io5";
 import * as sessionActions from '../../store/session';
 
 function ProfileButton({ admin }) {
