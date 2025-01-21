@@ -14,21 +14,23 @@ h1 {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin: 15px 0;
     color: #555;
+    font-family: 'Playfair Display', serif;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin: 10px 0;
     color: #007bff;
     cursor: pointer;
+    font-family: 'Great Vibes', cursive;
 }
 
-h3:hover {
+/* h3:hover {
     text-decoration: underline;
-}
+} */
 
 #fun-facts-div {
     background-color: #fff;
