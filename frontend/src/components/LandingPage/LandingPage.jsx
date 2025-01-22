@@ -21,7 +21,7 @@ function LandingPage() {
                 <p>Both Mariam and Shakar work in law enforcement. Mariam is a lawyer and Shakar is a police officer.</p>
                 <p>Both Mariam and Shakar have one dimple on the same side.</p>
             </div>
-            <img src="path/to/couple-photo.jpg" alt="Couple Photo" />
+            <img src="/frontend/public/images/IMG_0193.JPG" alt="Couple Photo" />
             <div className={styles.gratitudeMessage}>
                 <p>
                     We are incredibly grateful to have you here with us on this momentous day.
