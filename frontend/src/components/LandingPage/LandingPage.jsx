@@ -37,7 +37,7 @@ function LandingPage() {
                     - Shakar and Mariam
                 </p>
             </div>
-            <img src="path/to/another-photo.jpg" alt="Decorative Image" />
+            <img />
             <div id="quran-ver-div" className={styles.quranVerse}>
                 <h2 id="quran-ver-heading">IT IS NARRATED (30:21)</h2>
                 <p id="quran-verse">
