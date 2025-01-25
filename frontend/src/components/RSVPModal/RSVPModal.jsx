@@ -37,7 +37,7 @@ function RSVPModal() {
 
     return (
         <div className={styles.modalContainer}>
-            <h1>RSVP Form</h1>
+            <h1 id="rsvp-heading">RSVP Form</h1>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:
