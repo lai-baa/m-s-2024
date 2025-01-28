@@ -13,7 +13,8 @@ function LandingPage() {
     return (
         <div className={styles.landingContainer}>
             <Navigation />
-            <img src="path/to/banner.jpg" alt="Wedding Banner" className={styles.bannerImage} />
+            {/* Updated image paths */}
+            <img src="/images/banner.jpg" alt="Wedding Banner" className={styles.bannerImage} />
             <h1>MARIAM & SHAKAR TIE THE KNOT</h1>
             <h2>Join us for the celebration of love</h2>
             <div id="fun-facts-div" className={styles.funFacts}>
@@ -21,7 +22,7 @@ function LandingPage() {
                 <p>Both Mariam and Shakar work in law enforcement. Mariam is a lawyer and Shakar is a police officer.</p>
                 <p>Both Mariam and Shakar have one dimple on the same side.</p>
             </div>
-            <img src="/frontend/public/images/IMG_0193.JPG" alt="Couple Photo" />
+            <img src="/images/IMG_0193.JPG" alt="Couple Photo" />
             <div className={styles.gratitudeMessage}>
                 <p>
                     We are incredibly grateful to have you here with us on this momentous day.
@@ -37,7 +38,6 @@ function LandingPage() {
                     - Shakar and Mariam
                 </p>
             </div>
-            <img />
             <div id="quran-ver-div" className={styles.quranVerse}>
                 <h2 id="quran-ver-heading">IT IS NARRATED (30:21)</h2>
                 <p id="quran-verse">
