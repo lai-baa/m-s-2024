@@ -1,24 +1,25 @@
-// frontend/src/components/Navigation/Navigation.jsx
-
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
-// import './Navigation.css';
+import './Navigation.css';
 
 function Navigation({ isLoaded }) {
   const sessionAdmin = useSelector(state => state.session.admin);
 
   return (
-    <ul>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      {isLoaded && (
-        <li>
-          <ProfileButton admin={sessionAdmin} />
-        </li>
-      )}
-    </ul>
+    <nav className="navBar">
+      {/* Logo */}
+      <div className="logo">
+        <NavLink to="/">
+          <img src="/images/logo.png" alt="Logo" className="logoImage" />
+        </NavLink>
+      </div>
+
+      {/* Profile Button */}
+      <div className="profile">
+        {isLoaded && <ProfileButton admin={sessionAdmin} />}
+      </div>
+    </nav>
   );
 }
 

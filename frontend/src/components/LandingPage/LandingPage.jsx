@@ -1,5 +1,5 @@
 import { useModal } from '../../context/Modal';
-import Navigation from '../Navigation/Navigation';
+// import Navigation from '../Navigation/Navigation';
 import RSVPModal from '../RSVPModal/RSVPModal';
 import styles from './LandingPage.css';
 
@@ -12,7 +12,7 @@ function LandingPage() {
 
     return (
         <div className={styles.landingContainer}>
-            <Navigation />
+            {/* <Navigation /> */}
             {/* Updated image paths */}
             <img src="/images/banner.jpg" alt="Wedding Banner" className={styles.bannerImage} />
             <h1>MARIAM & SHAKAR TIE THE KNOT</h1>
