@@ -10,6 +10,7 @@ import { useState, useEffect, useRef } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
 // import { IoMenu } from "react-icons/io5";
 import * as sessionActions from '../../store/session';
+import "./Navigation.css";
 
 function ProfileButton({ admin }) {
   const dispatch = useDispatch();
