@@ -11,7 +11,7 @@ function Navigation({ isLoaded }) {
       {/* Logo */}
       <div className="logo">
         <NavLink to="/">
-          <img src="/images/IMG_0193.JPG" alt="Logo" className="logoImage" />
+          <img src="/images/logo.png" alt="Logo" className="logoImage" />
         </NavLink>
       </div>
 
