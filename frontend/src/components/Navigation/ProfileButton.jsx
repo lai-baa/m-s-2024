@@ -1,19 +1,19 @@
 // frontend/src/components/Navigation/ProfileButton.jsx
 
-// import { logout } from "../../store/session";
 import OpenModalMenuItem from './OpenModalMenuItem';
 import LoginFormModal from '../LoginFormModal/LoginFormModal';
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { useDispatch } from 'react-redux';
 import { useState, useEffect, useRef } from 'react';
 import { FaUserCircle } from 'react-icons/fa';
-// import { IoMenu } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
 import * as sessionActions from '../../store/session';
 import "./Navigation.css";
 
 function ProfileButton({ admin }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [showMenu, setShowMenu] = useState(false);
   const ulRef = useRef();
 
@@ -38,26 +38,29 @@ function ProfileButton({ admin }) {
 
   const closeMenu = () => setShowMenu(false);
 
-  const logout = (e) => {
+  const logoutClick = (e) => {
     e.preventDefault();
     dispatch(sessionActions.logout());
-  };
+    closeMenu();
+    navigate('/');
+};
 
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
 
   return (
     <>
-      <button onClick={toggleMenu}>
+      <button id="toggle-menu-button" onClick={toggleMenu}>
+        <IoMenu />
         <FaUserCircle />
       </button>
       <ul className={ulClassName} ref={ulRef}>
       {admin ? (
           <>
-            <li>{admin.username}</li>
-            <li>{admin.firstName} {admin.lastName}</li>
+            {/* <li>{admin.username}</li> */}
+            <li>Hello, {admin.firstName}</li>
             <li>{admin.email}</li>
-            <li>
-              <button onClick={logout}>Log Out</button>
+            <li id="logout">
+              <button onClick={logoutClick}>Log Out</button>
             </li>
           </>
         ) : (
@@ -67,6 +70,7 @@ function ProfileButton({ admin }) {
                 buttonText="Log In"
                 onButtonClick={closeMenu}
                 modalComponent={<LoginFormModal />}
+                className="dropdown-button"
               />
             </li>
           </>
