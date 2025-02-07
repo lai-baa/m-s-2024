@@ -14,7 +14,7 @@ function LandingPage() {
         <div className={styles.landingContainer}>
             {/* <Navigation /> */}
             {/* Updated image paths */}
-            {/* <img src="/images/banner.jpg" alt="Wedding Banner" className={styles.bannerImage} /> */}
+            
             <h1>MARIAM & SHAKAR TIE THE KNOT</h1>
             <h2>Join us for the celebration of love</h2>
             <div id="fun-facts-div" className={styles.funFacts}>
