@@ -52,6 +52,7 @@ const initialState = { admin: null };
 const sessionReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_ADMIN:
+      console.log("Admin logged in:", action.payload); // Debugging line
       return { ...state, admin: action.payload };
     case REMOVE_ADMIN:
       return { ...state, admin: null };
