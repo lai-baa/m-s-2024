@@ -32,9 +32,9 @@ h3 {
     text-align: center;
 }
 
-/* h3:hover {
+h3:hover {
     text-decoration: underline;
-} */
+}
 
 #fun-facts-div {
     background-color: #fff;
@@ -93,6 +93,7 @@ img {
     text-align: center;
     color: #00796b;
     font-style: italic;
+    text-decoration: none;
 }
 
 .rsvpLink {
