@@ -1,4 +1,4 @@
-/* LandingPage.module.css */
+/* LandingPage.css */
 .landingContainer {
     text-align: center;
     font-family: 'Arial', sans-serif;
@@ -46,7 +46,7 @@ h3:hover {
 }
 
 #fun-facts-div h2 {
-    color: #007bff;
+    color: #006064;
     margin-bottom: 15px;
 }
 
