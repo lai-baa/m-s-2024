@@ -4,7 +4,7 @@ import { logout } from "../../store/session";
 import OpenModalMenuItem from './OpenModalMenuItem'
 import LoginFormModal from '../LoginFormModal/LoginFormModal';
 import { useNavigate } from "react-router-dom";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { useDispatch } from "react-redux";
 import { useEffect, useState, useRef } from "react";
@@ -62,8 +62,8 @@ const ProfileButton = ({admin}) => {
                         <Link to="/favorites" onClick={closeMenu} className="dropdown-link">Favorites</Link>
                         <hr />
                         <Link to="/reminders" onClick={closeMenu} className="dropdown-link">Reminders</Link> */}
-                        {/* <hr />
-                        <Link to="/my-profile" onClick={closeMenu} className="dropdown-link">My Profile</Link> */}
+                        <hr />
+                        <Link to="/rsvps" onClick={closeMenu} className="dropdown-link">RSVPs</Link>
                         <hr />
                         <li id="logout">
                             <button onClick={logoutClick}>Log Out</button>
