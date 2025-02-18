@@ -23,7 +23,7 @@ function LandingPage() {
                 <p>Both Mariam and Shakar have one dimple on the same side.</p>
             </div>
             <img src="/images/IMG_0193.JPG" alt="Couple Photo" />
-            <div className={styles.gratitudeMessage}>
+            <div id="couple-message" className={styles.gratitudeMessage}>
                 <p>
                     We are incredibly grateful to have you here with us on this momentous day.
                     Your presence fills our heart with warmth and joy, and we cannot thank you
