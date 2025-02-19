@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import './Navigation.css';
-import styles from '../LandingPage/LandingPage.css';
+// import styles from '../LandingPage/LandingPage.css';
 
 function Navigation({ isLoaded }) {
   const sessionAdmin = useSelector(state => state.session.admin);
@@ -15,7 +15,7 @@ function Navigation({ isLoaded }) {
           <img src="/images/logo.png" alt="Logo" className="logoImage" />
         </NavLink>
       </div>
-      <img src="/images/banner.jpg" alt="Wedding Banner" className={styles.bannerImage} />
+      {/* <img src="/images/banner.jpg" alt="Wedding Banner" className={styles.bannerImage} /> */}
       {/* Profile Button */}
       <div className="profile">
         {isLoaded && <ProfileButton admin={sessionAdmin} />}
