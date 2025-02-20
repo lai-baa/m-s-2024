@@ -68,8 +68,8 @@
 }
 
 /* Logout Button */
-.logoutButton {
-  background: #d9534f; /* Red background for logout */
+/* .logoutButton {
+  background: #d9534f;
   color: white;
   border: none;
   padding: 5px 10px;
@@ -81,7 +81,7 @@
   width: 90%;
   margin: 0 auto;
   text-align: center;
-}
+} */
 
 .logoutButton:hover {
   background: #c9302c; /* Darker red for hover */
