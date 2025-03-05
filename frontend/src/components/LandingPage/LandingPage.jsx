@@ -41,10 +41,10 @@ function LandingPage() {
             <div id="quran-ver-div" className={styles.quranVerse}>
                 <h2 id="quran-ver-heading">IT IS NARRATED (30:21)</h2>
                 <p id="quran-verse">
-                    And one of His signs is that He created you spouses from
+                    &quot;And one of His signs is that He created you spouses from
                     among yourselves so that you may find comfort in them.
                     And He has placed between you compassion and mercy.
-                    Surely in this are signs for people who reflect.
+                    Surely in this are signs for people who reflect.&quot;
                 </p>
                 <h3 id="quran-verse-surah">Surah Ar-Rum 21</h3>
             </div>
