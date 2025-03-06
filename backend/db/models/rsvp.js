@@ -1,26 +1,43 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+
+const { Model, Validator } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class RSVP extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
     static associate(models) {
       // define association here
     }
   }
   RSVP.init({
-    name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    phone: DataTypes.STRING,
-    attendees: DataTypes.INTEGER
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        len: [3, 256],
+        isEmail: true,
+      },
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    attendees: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
   }, {
     sequelize,
     modelName: 'RSVP',
+    defaultScope: {
+      attributes: {
+        exclude: ['createdAt', 'updatedAt'],
+      },
+    },
   });
   return RSVP;
 };
