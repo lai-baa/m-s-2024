@@ -6,7 +6,7 @@ const { RSVP } = require("../../db/models");
 router.get("/", async (req, res) => {
   try {
     const rsvps = await RSVP.findAll({
-      order: [["createdAt", "DESC"]], // Order by latest RSVP
+      order: [["createdAt", "DESC"]],
     });
     res.json(rsvps);
   } catch (err) {
