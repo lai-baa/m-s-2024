@@ -17,10 +17,15 @@ function LandingPage() {
             
             <h1>MARIAM & SHAKAR TIE THE KNOT</h1>
             <h2>Join us for the celebration of love</h2>
-            <div id="fun-facts-div" className={styles.funFacts}>
-                <h2>Fun Facts About the Couple</h2>
-                <p>Both Mariam and Shakar work in law enforcement. Mariam is a lawyer and Shakar is a police officer.</p>
-                <p>Both Mariam and Shakar have one dimple on the same side.</p>
+            <div id="quran-ver-div" className={styles.quranVerse}>
+                <h2 id="quran-ver-heading">IT IS NARRATED (30:21)</h2>
+                <p id="quran-verse">
+                    &quot;And one of His signs is that He created you spouses from
+                    among yourselves so that you may find comfort in them.
+                    And He has placed between you compassion and mercy.
+                    Surely in this are signs for people who reflect.&quot;
+                </p>
+                <h3 id="quran-verse-surah">Surah Ar-Rum 21</h3>
             </div>
             <img src="/images/IMG_0193.JPG" alt="Couple Photo" />
             <div id="couple-message" className={styles.gratitudeMessage}>
@@ -38,15 +43,10 @@ function LandingPage() {
                     - Shakar and Mariam
                 </p>
             </div>
-            <div id="quran-ver-div" className={styles.quranVerse}>
-                <h2 id="quran-ver-heading">IT IS NARRATED (30:21)</h2>
-                <p id="quran-verse">
-                    &quot;And one of His signs is that He created you spouses from
-                    among yourselves so that you may find comfort in them.
-                    And He has placed between you compassion and mercy.
-                    Surely in this are signs for people who reflect.&quot;
-                </p>
-                <h3 id="quran-verse-surah">Surah Ar-Rum 21</h3>
+            <div id="fun-facts-div" className={styles.funFacts}>
+                <h2>Fun Facts About the Couple</h2>
+                <p>Both Mariam and Shakar work in law enforcement. Mariam is a lawyer and Shakar is a police officer.</p>
+                <p>Both Mariam and Shakar have one dimple on the same side.</p>
             </div>
             <h3 onClick={openRSVPModal} className={styles.rsvpLink}>
                 RSVP for Mariam and Shakar&apos;s wedding!
