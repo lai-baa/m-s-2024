@@ -1,6 +1,9 @@
 import { useModal } from '../../context/Modal';
 // import Navigation from '../Navigation/Navigation';
 import RSVPModal from '../RSVPModal/RSVPModal';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 import styles from './LandingPage.css';
 
 function LandingPage() {
@@ -8,6 +11,17 @@ function LandingPage() {
 
     const openRSVPModal = () => {
         setModalContent(<RSVPModal />);
+    };
+
+    // Carousel settings
+    const settings = {
+        dots: true, // Show navigation dots
+        infinite: true, // Infinite looping
+        speed: 500, // Transition speed
+        slidesToShow: 1, // Show one image at a time
+        slidesToScroll: 1,
+        autoplay: true, // Auto-slide images
+        autoplaySpeed: 3000, // Change image every 3 seconds
     };
 
     return (
@@ -27,7 +41,20 @@ function LandingPage() {
                 </p>
                 <h3 id="quran-verse-surah">Surah Ar-Rum 21</h3>
             </div>
-            <img src="/images/IMG_0193.JPG" alt="Couple Photo" />
+
+            {/* Carousel */}
+            <Slider {...settings} className={styles.carouselContainer}>
+                <div>
+                    <img src="/images/IMG_0193.JPG" alt="Slide 1" className={styles.carouselImage} />
+                </div>
+                <div>
+                    <img src="/images/image2.jpg" alt="Slide 2" className={styles.carouselImage} />
+                </div>
+                <div>
+                    <img src="/images/image3.jpg" alt="Slide 3" className={styles.carouselImage} />
+                </div>
+            </Slider>
+            {/* <img src="/images/IMG_0193.JPG" alt="Couple Photo" /> */}
             <div id="couple-message" className={styles.gratitudeMessage}>
                 <p>
                     We are incredibly grateful to have you here with us on this momentous day.
