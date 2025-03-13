@@ -27,7 +27,6 @@ function LandingPage() {
     return (
         <div className={styles.landingContainer}>
             {/* <Navigation /> */}
-            {/* Updated image paths */}
             
             <h1>MARIAM & SHAKAR TIE THE KNOT</h1>
             <h2>Join us for the celebration of love</h2>
