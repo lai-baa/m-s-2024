@@ -47,10 +47,10 @@ function LandingPage() {
                     <img src="/images/IMG_0193.JPG" alt="Slide 1" className={styles.carouselImage} />
                 </div>
                 <div>
-                    <img src="/images/image2.jpg" alt="Slide 2" className={styles.carouselImage} />
+                    <img src="/images/IMG_2741.jpg" alt="Slide 2" className={styles.carouselImage} />
                 </div>
                 <div>
-                    <img src="/images/image3.jpg" alt="Slide 3" className={styles.carouselImage} />
+                    <img src="/images/IMG_2741.jpg" alt="Slide 3" className={styles.carouselImage} />
                 </div>
             </Slider>
             {/* <img src="/images/IMG_0193.JPG" alt="Couple Photo" /> */}
