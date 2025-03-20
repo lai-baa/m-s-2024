@@ -6,17 +6,23 @@ function RSVPPage() {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetch("/api/rsvps") // Fetch from backend
-      .then((res) => res.json())
-      .then((data) => {
-        setRsvps(data);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.error("Error fetching RSVPs:", err);
-        setError("Failed to load RSVP data.");
-        setLoading(false);
-      });
+      fetch("/api/rsvps")
+          .then((response) => response.json())
+          .then((data) => {
+              console.log("Fetched RSVPs:", data); // Debugging log
+              if (Array.isArray(data)) {
+                  setRsvps(data);
+              } else {
+                  console.error("RSVPs is not an array:", data);
+                  setRsvps([]);
+              }
+              setLoading(false);
+          })
+          .catch((err) => {
+              console.error("Error fetching RSVPs:", err);
+              setError("Failed to load RSVPs.");
+              setLoading(false);
+          });
   }, []);
 
   if (loading) return <p>Loading RSVPs...</p>;
