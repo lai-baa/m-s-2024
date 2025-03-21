@@ -6,6 +6,11 @@ module.exports = (sequelize, DataTypes) => {
   class Admin extends Model {
     static associate(models) {
       // define association here
+      Admin.hasMany(models.RSVP, {
+        foreignKey: "adminId",
+        onDelete: "CASCADE",
+        hooks: true,
+      });
     }
   }
   Admin.init({

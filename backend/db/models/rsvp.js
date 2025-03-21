@@ -6,9 +6,17 @@ module.exports = (sequelize, DataTypes) => {
   class RSVP extends Model {
     static associate(models) {
       // define association here
+      RSVP.belongsTo(models.Admin, {
+        foreignKey: "adminId",
+        onDelete: "CASCADE",
+      });
     }
   }
   RSVP.init({
+    adminId: {
+      type: DataTypes.INTEGER,
+    allowNull: false
+  },
     name: {
       type: DataTypes.STRING,
       allowNull: false

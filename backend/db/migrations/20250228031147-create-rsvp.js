@@ -14,6 +14,12 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      adminId: {
+        type: Sequelize.INTEGER,
+        references: { model: "Admins", key: "id" },
+        onDelete: "CASCADE",
+        allowNull: false,
+      },
       name: {
         type: Sequelize.STRING(100),
         allowNull: false
