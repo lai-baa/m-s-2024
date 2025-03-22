@@ -16,6 +16,18 @@ module.exports = {
         phone: '347-825-5377',
         attendees: 1,
       },
+      {
+        name: 'Hajra Shoulat',
+        email: 'hajrashoukat@gmail.com',
+        phone: '347-825-5377',
+        attendees: 2,
+      },
+      {
+        name: 'Qutbia Shoulat',
+        email: 'biax3@gmail.com',
+        phone: '347-825-5377',
+        attendees: 1,
+      },
     ], { validate: true });
   },
 
