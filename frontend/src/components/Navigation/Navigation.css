@@ -37,18 +37,30 @@
 
 /* Profile Dropdown */
 .profile-dropdown {
+  display: block;
   position: absolute;
-  top: 60px;
-  right: 0; /* Align dropdown to the right of the profile button */
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  width: 200px;
-  z-index: 1000; /* Ensure dropdown appears above other elements */
-  text-align: left; /* Align text to the left */
-  font-family: Arial, sans-serif;
-  animation: fadeIn 0.2s ease-in-out;
+  top: 3.5em;
+  right: 1em;
+  background-color: #ffffff;
+  border: solid 2.5px black;
+  border-radius: 2px;
+  z-index: 1;
+  padding: .2em 1em;
+  min-width: 180px;
+}
+
+.profile-dropdown * {
+  padding: .125em 0em;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-dropdown hr {
+  width: 100%;
+  border-top: 2px solid black;
+  position: relative;
+  padding: 0;
+  margin: 5px 0;
 }
 
 .profile-dropdown li {
