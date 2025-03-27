@@ -2,7 +2,7 @@
 
 import { logout } from "../../store/session";
 import OpenModalMenuItem from './OpenModalMenuItem'
-import AdminLoginModal from "../AdminModal";
+import LoginFormModal from '../LoginFormModal/LoginFormModal';
 import { useNavigate } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
@@ -75,7 +75,7 @@ const ProfileButton = ({admin}) => {
                           <OpenModalMenuItem
                               itemText="Log In"
                               onItemClick={closeMenu}
-                              modalComponent={<AdminLoginModal />}
+                              modalComponent={<LoginFormModal />}
                               className="dropdown-button"
                           />
                       </li>
