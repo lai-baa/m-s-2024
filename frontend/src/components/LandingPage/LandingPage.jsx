@@ -54,19 +54,17 @@ function LandingPage() {
                 </div>
             </Slider>
             {/* <img src="/images/IMG_0193.JPG" alt="Couple Photo" /> */}
-            <div id="couple-message" className={styles.gratitudeMessage}>
-                <p>
+            <div id="couple-message-div" className={styles.gratitudeMessage}>
+                <p id="couple-message">
                     We are incredibly grateful to have you here with us on this momentous day.
                     Your presence fills our heart with warmth and joy, and we cannot thank you
-                    enough for sharing in our joyous occasion.
-                    <br />
-                    Your love and support have been unwavering, and we are deeply touched by
-                    the sacrifices you have made to be here. Our hearts are overflowing with
-                    gratitude for the role you have played in our lives, and we feel blessed
-                    to have such amazing family and friends.
+                    enough for sharing in our joyous occasion. Your love and support have been 
+                    unwavering, and we are deeply touched by the sacrifices you have made to be 
+                    here. Our hearts are overflowing with gratitude for the role you have played 
+                    in our lives, and we feel blessed to have such amazing family and friends.
                     <br />
                     <br />
-                    - Shakar and Mariam
+                    <h3 id="mariam-shakar-signoff">- Shakar and Mariam</h3>
                 </p>
             </div>
             <div id="fun-facts-div" className={styles.funFacts}>

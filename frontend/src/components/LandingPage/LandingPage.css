@@ -95,14 +95,14 @@ img {
     text-align: center;
 }
 
-#quran-verse {
+#quran-verse, #couple-message {
     font-size: 1.2rem;
     line-height: 1.8;
     color: #004d40;
     margin-bottom: 10px;
 }
 
-#quran-verse-surah {
+#quran-verse-surah, #mariam-shakar-signoff {
     text-align: center;
     color: #00796b;
     font-style: italic;
