@@ -62,9 +62,7 @@ function LandingPage() {
                     unwavering, and we are deeply touched by the sacrifices you have made to be 
                     here. Our hearts are overflowing with gratitude for the role you have played 
                     in our lives, and we feel blessed to have such amazing family and friends.
-                    <br />
-                    <br />
-                    <h3 id="mariam-shakar-signoff">- Shakar and Mariam</h3>
+                    <h3 id="mariam-shakar-signoff">Shakar and Mariam</h3>
                 </p>
             </div>
             <div id="fun-facts-div" className={styles.funFacts}>

@@ -102,11 +102,19 @@ img {
     margin-bottom: 10px;
 }
 
-#quran-verse-surah, #mariam-shakar-signoff {
+#quran-verse-surah {
     text-align: center;
     color: #00796b;
     font-style: italic;
     text-decoration: none;
+}
+
+#mariam-shakar-signoff {
+    text-align: center;
+    color: #00796b;
+    /* font-style: italic; */
+    text-decoration: none;
+    font-family: 'Great Vibes';
 }
 
 .rsvpLink {
