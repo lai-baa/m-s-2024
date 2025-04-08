@@ -30,10 +30,12 @@ function LandingPage() {
             
             <h1>MARIAM & SHAKAR TIE THE KNOT</h1>
             <h2>Join us for the celebration of love</h2>
-            <h4>Save the date: September 10th, 2025</h4>
-            <h4>Venue: Suleymaniye Mosque</h4>
-            <h4>459 Deer Park Rd</h4>
-            <h4>Dix Hills, NY 11746</h4>
+            <div id="venue-details-div">
+                <h4>Save the date: September 10th, 2025</h4>
+                <h4>Venue: Suleymaniye Mosque</h4>
+                <h4>459 Deer Park Rd</h4>
+                <h4>Dix Hills, NY 11746</h4>
+            </div>
             <div id="quran-ver-div" className={styles.quranVerse}>
                 <h2 id="quran-ver-heading">IT IS NARRATED (30:21)</h2>
                 <p id="quran-verse">

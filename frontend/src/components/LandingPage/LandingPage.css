@@ -57,6 +57,17 @@ h3:hover {
     color: #444;
 }
 
+#venue-details-div {
+    text-align: center;
+    color: #004d40;
+    border: solid black 1px;
+    background-color: #e0f7fa;
+    /* padding: 20px; */
+    margin: 30px auto;
+    max-width: 300px;
+    border-radius: 8px;
+}
+
 #couple-message {
     border: solid black 1px;
     background-color: #e0f7fa;
