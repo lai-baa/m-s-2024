@@ -109,7 +109,7 @@ img {
 #quran-verse, #couple-message {
     font-size: 1.2rem;
     line-height: 1.8;
-    color: #004d40;
+    color: #006064;
     margin-bottom: 10px;
 }
 
@@ -122,8 +122,8 @@ img {
 
 #mariam-shakar-signoff {
     text-align: center;
-    color: #00796b;
-    /* font-style: italic; */
+    color: #006064;
+    font-style: italic;
     text-decoration: none;
     font-family: 'Great Vibes';
 }
