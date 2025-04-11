@@ -9,26 +9,29 @@ if (process.env.NODE_ENV === 'production') {
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await Admin.bulkCreate([
+    await RSVP.bulkCreate([
       {
         name: 'Shaista Shoulat',
         email: 'shaistashoukat97@gmail.com',
         phone: '347-825-5377',
         attendees: 1,
+        adminId: 1,
       },
       {
         name: 'Hajra Shoulat',
         email: 'hajrashoukat@gmail.com',
         phone: '347-825-5377',
         attendees: 2,
+        adminId: 1,
       },
       {
         name: 'Qutbia Shoulat',
         email: 'biax3@gmail.com',
         phone: '347-825-5377',
         attendees: 1,
+        adminId: 1,
       },
-    ], { validate: true });
+    ], { validate: true });    
   },
 
   async down (queryInterface, Sequelize) {
