@@ -8,8 +8,10 @@ const router = express.Router();
 // });
 
 const apiRouter = require('./api');
+const rsvpRoutes = require('./api/rsvps'); // ✅ Add this line
 
 router.use('/api', apiRouter);
+router.use('/rsvps', rsvpRoutes);
 
 // Add a XSRF-TOKEN cookie
 router.get("/api/csrf/restore", (req, res) => {
