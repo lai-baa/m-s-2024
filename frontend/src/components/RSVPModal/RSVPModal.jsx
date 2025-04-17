@@ -16,29 +16,29 @@ function RSVPModal() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
 
-        const subject = "RSVP for Mariam and Shakar's Wedding";
-        const body = `
-            Name: ${formData.name}
-            Phone: ${formData.phone}
-            Email: ${formData.email}
-            Number of Attendees: ${formData.attendees}
-        `;
-        const mailtoLink = `mailto:laiba.junk1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    //     const subject = "RSVP for Mariam and Shakar's Wedding";
+    //     const body = `
+    //         Name: ${formData.name}
+    //         Phone: ${formData.phone}
+    //         Email: ${formData.email}
+    //         Number of Attendees: ${formData.attendees}
+    //     `;
+    //     const mailtoLink = `mailto:laiba.junk1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
-        // Open the user's email client
-        window.location.href = mailtoLink;
+    //     // Open the user's email client
+    //     window.location.href = mailtoLink;
 
-        // Optionally close the modal
-        closeModal();
-    };
+    //     // Optionally close the modal
+    //     closeModal();
+    // };
 
     return (
         <div className={styles.modalContainer}>
             <h1 id="rsvp-heading">RSVP Form</h1>
-            <form onSubmit={handleSubmit}>
+            <form>
                 <label>
                     Name:
                     <input
