@@ -1,14 +1,31 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const { RSVP } = require("../../db/models");
+const sgMail = require('@sendgrid/mail');
+require('dotenv').config();
 
-router.get("/", async (req, res) => {
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+router.post('/email', async (req, res) => {
+  const { name, email, phone, attendees } = req.body;
+
+  const msg = {
+    to: process.env.EMAIL_TO,
+    from: process.env.EMAIL_FROM,
+    subject: `RSVP from ${name}`,
+    text: `
+      Name: ${name}
+      Email: ${email}
+      Phone: ${phone}
+      Attendees: ${attendees}
+    `,
+  };
+
   try {
-    const rsvps = await RSVP.findAll();
-    res.json(rsvps);
+    await sgMail.send(msg);
+    return res.status(200).json({ message: "RSVP email sent successfully" });
   } catch (err) {
-    console.error("Error fetching RSVPs:", err);
-    res.status(500).json({ error: "Internal server error" });
+    console.error("SendGrid error:", err);
+    return res.status(500).json({ error: "Failed to send RSVP email" });
   }
 });
 
