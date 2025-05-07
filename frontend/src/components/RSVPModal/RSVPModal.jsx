@@ -16,25 +16,31 @@ function RSVPModal() {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const subject = "RSVP for Mariam and Shakar's Wedding";
-        const body = `
-            Name: ${formData.name}
-            Phone: ${formData.phone}
-            Email: ${formData.email}
-            Number of Attendees: ${formData.attendees}
-        `;
-        const mailtoLink = `mailto:laiba.junk1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        // Open the user's email client
-        window.location.href = mailtoLink;
-
-        // Optionally close the modal
-        closeModal();
+      
+        try {
+          const res = await fetch("/api/rsvps/email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+      
+          if (res.ok) {
+            alert("RSVP submitted successfully!");
+            closeModal();
+          } else {
+            const data = await res.json();
+            alert("Failed to send RSVP: " + data.error);
+          }
+        } catch (err) {
+          console.error("Error sending RSVP:", err);
+          alert("Something went wrong.");
+        }
     };
-
+      
     return (
         <div className={styles.modalContainer}>
             <h1 id="rsvp-heading">RSVP Form</h1>
