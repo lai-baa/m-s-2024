@@ -29,7 +29,7 @@ function RSVPPage() {
   if (error) return <p style={{ color: "red" }}>{error}</p>;
 
   return (
-    <div className="centered-table" style={{ padding: "20px" }}>
+    <div style={{ padding: "20px" }}>
       <h1>RSVP List</h1>
       {rsvps.length === 0 ? (
         <p>No RSVPs yet.</p>
