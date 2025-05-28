@@ -1,5 +1,3 @@
-.centered-table {
-    display: flex;
-    justify-content: center;
+table {
+  margin: 0 auto;
 }
-  
